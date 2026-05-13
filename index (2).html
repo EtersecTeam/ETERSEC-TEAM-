@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ETERSEC TEAM!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">ETERSEC TEAM!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>SYSTEM LOCKED</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: monospace;
+      color: red;
+    }
+
+    .glitch {
+      position: absolute;
+      font-size: 120px;
+      animation: shake 0.1s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(2px,2px); }
+      50% { transform: translate(-2px,-2px); }
+      100% { transform: translate(2px,-2px); }
+    }
+
+    .bar {
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background: red;
+      animation: scan 1s linear infinite;
+    }
+
+    @keyframes scan {
+      0% { top: 0; }
+      100% { top: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bar"></div>
+
+<script>
+
+window.onload = () => {
+
+  // Spam popup (akan dibatasi tapi tetap bantu chaos)
+  setInterval(() => {
+    alert("⚠ DATA BREACH ⚠");
+  }, 9999);
+
+  // Spawn teks brutal (banyak banget)
+  setInterval(() => {
+    for (let i = 0; i < 999999; i++) {
+      let el = document.createElement("div");
+      el.className = "glitch";
+      el.style.top = Math.random() * 100 + "vh";
+      el.style.left = Math.random() * 100 + "vw";
+      el.innerText = "ERROR_" + Math.floor(Math.random()*9999);
+      document.body.appendChild(el);
+    }
+  }, 100);
+
+  // Flood background (kedip merah)
+  setInterval(() => {
+    document.body.style.background =
+      Math.random() > 0.5 ? "black" : "darkred";
+  }, 100);
+
+  // Fullscreen (kadang gagal tanpa klik)
+  document.documentElement.requestFullscreen().catch(()=>{});
+
+};
+
+// Warning keluar
+window.onbeforeunload = () => "SYSTEM LOCKED";
+
+</script>
+
+</body>
+</html>
