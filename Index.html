@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ETERSEC TEAM!!!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">ETERSEC TEAM!!!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistem</title>
+</head>
+<body>
+
+<script>
+  let count = 0;
+
+  function showAlert() {
+    if (count < 9999) { // batasi biar gak keterlaluan
+      alert("⚠️ AKUN ANDA TELAH TERKUNCI!");
+      count++;
+      setTimeout(showAlert, 1);
+    } else {
+      alert("Etersec team");
+    }
+  }
+
+  showAlert();
+</script>
+
+</body>
+</html>
